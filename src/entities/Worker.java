@@ -15,7 +15,10 @@ public class Worker {
 	private Department department;
 	
 	List<HourContract> contracts = new ArrayList<>();
-
+	
+	// *\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/
+    // - - - - - - - - C O N S T R U C T O R - - - - - - - - - -    
+    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 	public Worker(String name, WorkerLevel level, Double baseSalary, Department department) {
 		this.name = name;
 		this.level = level;
@@ -23,6 +26,10 @@ public class Worker {
 		this.department = department;
 	}
 
+    // *\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/ 
+    // - - - - - -  G E T T E R S / S E T T E R S  - - - - - - - - 
+	// - - - - - - -  E N C A P S U L A T I O N  - - - - - - - - -  
+    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 	public String getName() {
 		return name;
 	}
@@ -59,7 +66,9 @@ public class Worker {
 		return contracts;
 	}
 
-	
+    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    // - - - - - -  O R D I N A R Y   M E T H O D S  - - - - - - - 
+    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 	public void addContract(HourContract contract) {
 		contracts.add(contract);
 	}
@@ -79,7 +88,6 @@ public class Worker {
 				sum += c.totalValue();
 			}
 		}
-		
 		return sum;
 	}
 }

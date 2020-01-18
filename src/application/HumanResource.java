@@ -49,7 +49,6 @@ public class HumanResource {
 			HourContract contract = new HourContract(contractDate, valuePerHour, hours);
 			
 			worker.addContract(contract);
-							
 		}
 		
 		System.out.println();
