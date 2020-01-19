@@ -6,10 +6,10 @@ public class Product {
 	private double price;
 	private int quantity;
 	
-    // *\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/
-    // - - - - - - - - C O N S T R U C T O R S - - - - - - - - - -  
+	// *\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/
+	// - - - - - - - - C O N S T R U C T O R S - - - - - - - - - -  
 	// - - - - - - - -  O V E R L O A D I N G  - - - - - - - - - -   
-    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 	public Product() {
 		
 	}
@@ -25,10 +25,10 @@ public class Product {
 		this.quantity = quantity;
 	}
 	
-    // *\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/ 
-    // - - - - - -  G E T T E R S / S E T T E R S  - - - - - - - - 
+	// *\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/ 
+	// - - - - - -  G E T T E R S / S E T T E R S  - - - - - - - - 
 	// - - - - - - -  E N C A P S U L A T I O N  - - - - - - - - -  
-    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 	public String getName() {
 		return name;
 	}
@@ -55,9 +55,9 @@ public class Product {
 		this.quantity = quantity;
 	}
 
-    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-    // - - - - - -  O R D I N A R Y   M E T H O D S  - - - - - - - 
-    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	// - - - - - -  O R D I N A R Y   M E T H O D S  - - - - - - - 
+	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 	public double totalValueInStock() {
 		return quantity * price;
 	}

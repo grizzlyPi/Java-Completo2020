@@ -66,9 +66,9 @@ public class Worker {
 		return contracts;
 	}
 
-    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-    // - - - - - -  O R D I N A R Y   M E T H O D S  - - - - - - - 
-    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	// - - - - - -  O R D I N A R Y   M E T H O D S  - - - - - - - 
+	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 	public void addContract(HourContract contract) {
 		contracts.add(contract);
 	}

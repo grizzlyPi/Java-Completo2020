@@ -7,11 +7,10 @@ public class HourContract {
 	private Double valuePerHour;
 	private Integer hours;
 	
-    // *\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/
-    // - - - - - - - - C O N S T R U C T O R S - - - - - - - - - -  
+	// *\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/
+	// - - - - - - - - C O N S T R U C T O R S - - - - - - - - - -  
 	// - - - - - - - -  O V E R L O A D I N G  - - - - - - - - - -   
-    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-	
+	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	
 	public HourContract() {
 		
 	}
@@ -22,10 +21,10 @@ public class HourContract {
 		this.hours = hours;
 	}
 
-    // *\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/ 
-    // - - - - - -  G E T T E R S / S E T T E R S  - - - - - - - - 
+	// *\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/ 
+	// - - - - - -  G E T T E R S / S E T T E R S  - - - - - - - - 
 	// - - - - - - -  E N C A P S U L A T I O N  - - - - - - - - -  
-    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 	public Date getDate() {
 		return date;
 	}
@@ -50,9 +49,9 @@ public class HourContract {
 		this.hours = hours;
 	}
 	
-    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-    // - - - - - -  O R D I N A R Y   M E T H O D S  - - - - - - - 
-    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	// - - - - - -  O R D I N A R Y   M E T H O D S  - - - - - - - 
+	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 	public Double totalValue() {
 		return valuePerHour * hours;
 	}

@@ -10,19 +10,19 @@ public class Order {
 	private Date moment;
 	private OrderStatus status;
 	
-    // *\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/
-    // - - - - - - - - C O N S T R U C T O R - - - - - - - - - -    
-    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+	// *\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/
+	// - - - - - - - - C O N S T R U C T O R - - - - - - - - - -    
+	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 	public Order(Integer id, Date moment, OrderStatus status) {
 		this.id = id;
 		this.moment = moment;
 		this.status = status;
 	}
 
-    // *\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/ 
-    // - - - - - -  G E T T E R S / S E T T E R S  - - - - - - - - 
+	// *\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/ 
+	// - - - - - -  G E T T E R S / S E T T E R S  - - - - - - - - 
 	// - - - - - - -  E N C A P S U L A T I O N  - - - - - - - - -  
-    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 	public Integer getId() {
 		return id;
 	}
@@ -47,9 +47,9 @@ public class Order {
 		this.status = status;
 	}
 
-    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-    // - - - - - -  O R D I N A R Y   M E T H O D S  - - - - - - - 
-    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	// - - - - - -  O R D I N A R Y   M E T H O D S  - - - - - - - 
+	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 	@Override
 	public String toString() {
 		return "Order [id=" + id + ", moment=" + moment + ", status=" + status + "]";

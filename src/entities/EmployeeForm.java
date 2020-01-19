@@ -14,9 +14,9 @@ public class EmployeeForm {
 	private Double salary;
 	
 	
-    // *\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/
-    // - - - - - - - - C O N S T R U C T O R - - - - - - - - - -    
-    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+	// *\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/
+	// - - - - - - - - C O N S T R U C T O R - - - - - - - - - -    
+	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 	public EmployeeForm(Integer id, String name, Double salary) {
 		this.id = id;
 		this.name = name;
@@ -24,10 +24,10 @@ public class EmployeeForm {
 	}
 	
 	
-    // *\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/ 
-    // - - - - - -  G E T T E R S / S E T T E R S  - - - - - - - - 
+	// *\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/ 
+	// - - - - - -  G E T T E R S / S E T T E R S  - - - - - - - - 
 	// - - - - - - -  E N C A P S U L A T I O N  - - - - - - - - -  
-    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 	public void setId(Integer id) {
 		this.id = id;
 		
@@ -54,9 +54,9 @@ public class EmployeeForm {
 		return salary;
 	}
 	
-    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-    // - - - - - -  O R D I N A R Y   M E T H O D S  - - - - - - - 
-    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	// - - - - - -  O R D I N A R Y   M E T H O D S  - - - - - - - 
+	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 	public void addSalary(Double percent) {
 		salary = salary * (1 + percent/100) ; 
 	}
