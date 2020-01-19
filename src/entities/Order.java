@@ -54,6 +54,4 @@ public class Order {
 	public String toString() {
 		return "Order [id=" + id + ", moment=" + moment + ", status=" + status + "]";
 	}
-	
-	
 }
