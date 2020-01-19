@@ -56,7 +56,7 @@ public class HumanResource {
 		/****************************************************************************************************
 		 * A variável 'contract' é um ponteiro no 'stack' para o objeto da classe 'HourContract' no 'heap'.	*
 		 ****************************************************************************************************/
-			HourContract contract = new HourContract(contractDate, valuePerHour, hours);
+		HourContract contract = new HourContract(contractDate, valuePerHour, hours);
 			
 		/*********************************************************************************
 		 * O método '.addContract' copia o ponteiro 'contract' para a lista 'contracts'	 * 		
