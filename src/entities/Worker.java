@@ -17,8 +17,8 @@ public class Worker {
 	List<HourContract> contracts = new ArrayList<>();
 	
 	// *\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/
-    // - - - - - - - - C O N S T R U C T O R - - - - - - - - - -    
-    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+	// - - - - - - - - C O N S T R U C T O R - - - - - - - - - -    
+	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 	public Worker(String name, WorkerLevel level, Double baseSalary, Department department) {
 		this.name = name;
 		this.level = level;
@@ -26,10 +26,10 @@ public class Worker {
 		this.department = department;
 	}
 
-    // *\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/ 
-    // - - - - - -  G E T T E R S / S E T T E R S  - - - - - - - - 
+	// *\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/ 
+	// - - - - - -  G E T T E R S / S E T T E R S  - - - - - - - - 
 	// - - - - - - -  E N C A P S U L A T I O N  - - - - - - - - -  
-    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 	public String getName() {
 		return name;
 	}
