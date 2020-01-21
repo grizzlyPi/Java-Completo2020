@@ -15,14 +15,14 @@ public class TriangleAreaComparison {
 		Triangle x, y;
 		
 		/******************************************************************
-		 * "object" and "instance" are the same thing. There is a "class" *
-		 * that defines structure, and instances of that class 			  *
-		 * (obtained with new ClassName())				   				  *	
+		 * "object" and "instance" are the same thing. There is a "class"
+		 * that defines structure, and instances of that class
+		 * (obtained with new ClassName())	
 		 *****************************************************************/	
 		
 		/******************************************************************
-		* variable x stores a reference to an object of type Triangle	  *
-		* reference is a "link" to an Object.                             *
+		* variable x stores a reference to an object of type Triangle
+		* reference is a "link" to an Object.
 		******************************************************************/
 		x = new Triangle();
 		y = new Triangle();
@@ -39,10 +39,10 @@ public class TriangleAreaComparison {
 		y.c = sc.nextDouble();
 		
 		/**************************************************************************************
-		 * A method is a block of code which only runs when it is called.                     *
-		 * You can pass data, known as parameters, into a method.                             *
-		 * Methods are used to perform certain actions, and they are also known as functions. *
-		 * Why use methods? To reuse code: define the code once, and use it many times.       *
+		 * A method is a block of code which only runs when it is called.
+		 * You can pass data, known as parameters, into a method.
+		 * Methods are used to perform certain actions, and they are also known as functions.
+		 * Why use methods? To reuse code: define the code once, and use it many times.
 		 **************************************************************************************/
 		areaX = x.area();
 		areaY = y.area();

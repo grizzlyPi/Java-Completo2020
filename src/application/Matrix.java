@@ -19,9 +19,9 @@ public class Matrix {
 		System.out.println();
 		
 		/***********************************************************
-		 * A matrix is a way to organize data in columns and rows. *
-		 * A matrix is written inside brackets [ ][ ]. 			   *
-		 * Each item in a matrix is called an entry.			   *
+		 * A matrix is a way to organize data in columns and rows.
+		 * A matrix is written inside brackets [ ][ ].
+		 * Each item in a matrix is called an entry.
 		 ***********************************************************/
 		int[][] mat = new int[n][m];
 		

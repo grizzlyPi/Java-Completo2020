@@ -9,16 +9,16 @@ public class Scope {
 		// Both lifetime and scope should exist to access a variable
 		
 		/*************************
-		* Class variable/ scope: *
-		* Throughout the class.	 *
+		* Class variable/ scope:
+		* Throughout the class.
 		**************************/
 		// Until the end of the program
 		String salute = "Hello!";
 		Function beta = method();
 
 		/*********************************************
-		* Local variable/ scope: 					 *
-		* Within the block in which it is declared.	 *
+		* Local variable/ scope:
+		* Within the block in which it is declared.
 		**********************************************/
 		// Until the control leaves the block in which it is declared
 		if (true) {
@@ -30,15 +30,15 @@ public class Scope {
 		}
 		
 		/*************************************************
-		 * Variable not in scope: alfa, gama and counter *
+		 * Variable not in scope: alfa, gama and counter
 		 *************************************************/
 		System.out.println(salute);	
 		System.out.println(beta);
 	
 	}
 	/************************************************* 
-	 * Instance variable/ scope:					 *
-	 * Throughout the class except in static methods.*
+	 * Instance variable/ scope:
+	 * Throughout the class except in static methods.
 	 *************************************************/
 	// Until the object is available in the memory
 	static Function method() {
