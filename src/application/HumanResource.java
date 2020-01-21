@@ -33,9 +33,9 @@ public class HumanResource {
 		/**********************************************************************************************
 		 * A variável 'worker' é um ponteiro no 'stack' para o objeto da classe 'Worker' no 'heap'.   *
 		 * A variável 'department' é um ponteiro criado no momento da instanciação da classe 'Worker' *
-		 * para o objeto da classe 'Department'.													  *	
+		 * para o objeto da classe 'Department'.													  *
 		 * A variável 'contracts' é um ponteiro criado no momento da instanciação da classe 'Worker'  *
-		 * para o objeto vazio da classe 'ArrayList'.												  *	
+		 * para o objeto vazio da classe 'ArrayList'.												  *
 		 **********************************************************************************************/
 		Worker worker = new Worker(workerName, WorkerLevel.valueOf(workerLevel), workerSalary, new Department(departmentName));
 		
