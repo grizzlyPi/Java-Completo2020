@@ -30,12 +30,12 @@ public class HumanResource {
 		System.out.print("Base salary: ");
 		Double workerSalary = sc.nextDouble();
 		
-		/**********************************************************************************************
-		 * A variável 'worker' é um ponteiro no 'stack' para o objeto da classe 'Worker' no 'heap'.   *
-		 * A variável 'department' é um ponteiro criado no momento da instanciação da classe 'Worker' *
-		 * para o objeto da classe 'Department'.													  *
-		 * A variável 'contracts' é um ponteiro criado no momento da instanciação da classe 'Worker'  *
-		 * para o objeto vazio da classe 'ArrayList'.												  *
+		/***********************************************************************************************
+		 * A variável 'worker' é um ponteiro no 'stack' para o objeto da classe 'Worker' no 'heap'.    *
+		 * A variável 'department' é um ponteiro criado no momento da instanciação da classe 'Worker'  *
+		 * para o objeto da classe 'Department'.													   *
+		 * A variável 'contracts' é um ponteiro criado no momento da instanciação da classe 'Worker'   *
+		 * para o objeto vazio da classe 'ArrayList'.												   *
 		 **********************************************************************************************/
 		Worker worker = new Worker(workerName, WorkerLevel.valueOf(workerLevel), workerSalary, new Department(departmentName));
 		
@@ -53,9 +53,9 @@ public class HumanResource {
 			System.out.print("Duration (hours): ");
 			int hours = sc.nextInt();
 				
-		/****************************************************************************************************
-		 * A variável 'contract' é um ponteiro no 'stack' para o objeto da classe 'HourContract' no 'heap'.	*
-		 * Esse ponteiro é apagado da mémoria após a execução do bloco 'for'. 								*
+		/*****************************************************************************************************
+		 * A variável 'contract' é um ponteiro no 'stack' para o objeto da classe 'HourContract' no 'heap'.	 *
+		 * Esse ponteiro é apagado da mémoria após a execução do bloco 'for'. 								 *
 		 ****************************************************************************************************/
 		HourContract contract = new HourContract(contractDate, valuePerHour, hours);
 			
