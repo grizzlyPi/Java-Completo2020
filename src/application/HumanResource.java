@@ -53,10 +53,10 @@ public class HumanResource {
 			System.out.print("Duration (hours): ");
 			int hours = sc.nextInt();
 			
-		/****************************************************************************************************
-		 * A variável 'contract' é um ponteiro no 'stack' para o objeto da classe 'HourContract' no 'heap'.	*
-		 * Esse ponteiro é apagado da mémoria após a execução do bloco 'for'. 								*
-		 ****************************************************************************************************/
+	/****************************************************************************************************
+	 * A variável 'contract' é um ponteiro no 'stack' para o objeto da classe 'HourContract' no 'heap'.	*
+	 * Esse ponteiro é apagado da mémoria após a execução do bloco 'for'. 								*
+	 ****************************************************************************************************/
 		HourContract contract = new HourContract(contractDate, valuePerHour, hours);
 			
 		/*********************************************************************************
