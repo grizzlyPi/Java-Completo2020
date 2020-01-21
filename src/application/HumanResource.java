@@ -55,11 +55,12 @@ public class HumanResource {
 			
 		/****************************************************************************************************
 		 * A variável 'contract' é um ponteiro no 'stack' para o objeto da classe 'HourContract' no 'heap'.	*
+		 * Esse ponteiro é apagado da mémoria após a execução do bloco 'for'. 								*
 		 ****************************************************************************************************/
 		HourContract contract = new HourContract(contractDate, valuePerHour, hours);
 			
 		/*********************************************************************************
-		 * O método '.addContract' copia o ponteiro 'contract' para a lista 'contracts'	 * 		
+		 * O método '.addContract' copia o ponteiro 'contract' para a lista 'contracts'. *
 		 *********************************************************************************/
 			worker.addContract(contract);
 		}
@@ -75,7 +76,5 @@ public class HumanResource {
 		System.out.printf("Income for %s: %s", monthAndYear, String.format("%.2f", worker.income(year, month)));
 
 		sc.close();
-
 	}
-
 }

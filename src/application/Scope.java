@@ -25,11 +25,13 @@ public class Scope {
 			int counter = 1;
 			counter += 1;
 			System.out.println(counter);
+			Function gama = new Function("def");
+			System.out.println(gama);
 		}
 		
-		/********************************************
-		 * Variable not in scope: alfa  and counter *
-		 ********************************************/
+		/*************************************************
+		 * Variable not in scope: alfa, gama and counter *
+		 *************************************************/
 		System.out.println(salute);	
 		System.out.println(beta);
 	
