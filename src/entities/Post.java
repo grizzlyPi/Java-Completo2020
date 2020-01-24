@@ -1,17 +1,27 @@
 package entities;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
 public class Post {
+	/***************************************************************************
+	 * Se não for usada a palavra 'static', para cada instância da classe 'Post' 
+	 * haverá um objeto da classe 'SampleDateFormat' associado.
+	 ***************************************************************************/
+	private static SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+	
 	private Date moment;
 	private String title;
 	private String content;
 	private Integer likes;
 	
-	List<Comment> comment = new ArrayList<>();
+	List<Comment> comments = new ArrayList<>();
 	
+	// *\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/
+	// - - - - - - - - C O N S T R U C T O R - - - - - - - - - -    
+	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 	public Post() {
 		
 	}
@@ -23,6 +33,10 @@ public class Post {
 		this.likes = likes;
 	}
 
+	// *\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/ 
+	// - - - - - -  G E T T E R S / S E T T E R S  - - - - - - - - 
+	// - - - - - - -  E N C A P S U L A T I O N  - - - - - - - - -  
+	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 	public Date getMoment() {
 		return moment;
 	}
@@ -56,18 +70,32 @@ public class Post {
 	}
 
 	public List<Comment> getComment() {
-		return comment;
+		return comments;
 	}
 
-	public void setComment(List<Comment> comment) {
-		this.comment = comment;
-	}
-	
+	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	// - - - - - -  O R D I N A R Y   M E T H O D S  - - - - - - - 
+	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 	public void addComment(Comment comment) {
-		this.comment.add(comment);
+		comments.add(comment);
 	}
 	
 	public void removeComment(Comment comment) {
-		this.comment.remove(comment);
+		comments.remove(comment);
+	}
+	
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		sb.append(title + "\n");
+		sb.append(likes + " Likes - ");
+		sb.append(sdf.format(moment) + "\n");
+		sb.append(content + "\n");
+		sb.append("Comments:" + "\n");
+		
+		for (Comment c : comments) {
+			sb.append(c.getText() + "\n");
+		}
+		return sb.toString();
+		
 	}
 }
