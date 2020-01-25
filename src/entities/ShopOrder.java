@@ -15,8 +15,8 @@ public class ShopOrder {
 	
 	List<OrderItem> items = new ArrayList<>();
 	
-	SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
-	SimpleDateFormat sdf2 = new SimpleDateFormat("dd/MM/yyyy");
+	private static SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+	private static SimpleDateFormat sdf2 = new SimpleDateFormat("dd/MM/yyyy");
 	
 	// *\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/
 	// - - - - - - - - C O N S T R U C T O R - - - - - - - - - -    
