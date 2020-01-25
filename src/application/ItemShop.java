@@ -7,60 +7,64 @@ import java.util.Locale;
 import java.util.Scanner;
 
 import entities.Client;
-import entities.Order2;
+import entities.ShopOrder;
 import entities.OrderItem;
-import entities.Product2;
-import entities.enums.OrderStatus2;
+import entities.ShopProduct;
+import entities.enums.ShopOrderStatus;
 
-public class Shop2 {
+public class ItemShop {
 
 	public static void main(String[] args) throws ParseException {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 		
 		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-		Order2 order = null;
-		Product2 product;
-		OrderItem item;
-		
+
 		System.out.println("Enter client data:");
 		System.out.print("Name: ");
-		String name = sc.nextLine();
+		String clientName = sc.nextLine();
 		System.out.print("Email: ");
-		String email = sc.nextLine();
+		String clientEmail = sc.nextLine();
 		System.out.print("Birth date (DD/MM/YYYY): ");
-		Date birhtDate = sdf.parse(sc.nextLine());
-		Client client = new Client(name, email, birhtDate);
+		Date clientBirthOfDate = sdf.parse(sc.nextLine());
+		
+		Client client = new Client(clientName, clientEmail, clientBirthOfDate);
 		
 		System.out.println("Enter order data:");
 		System.out.print("Status: ");
-		OrderStatus2 status = OrderStatus2.valueOf(sc.nextLine());
+		ShopOrderStatus orderStatus = ShopOrderStatus.valueOf(sc.nextLine());
 		System.out.print("How many items to this order? ");
 		int n = sc.nextInt();
 		sc.nextLine();
+		
+		Date moment = new Date();
+		ShopOrder order = new ShopOrder(moment, orderStatus, client);
 		
 		for (int i = 0; i < n; i++) {
 			System.out.printf("Enter #%d item data:", i + 1);
 			System.out.println();
 			System.out.print("Product name: ");
-			String name1 = sc.nextLine();
+			String prodName = sc.nextLine();
 			System.out.print("Product price: ");
-			Double price = sc.nextDouble();
+			Double prodPrice = sc.nextDouble();
 			System.out.print("Quantity: ");
-			Integer quantity = sc.nextInt();
+			Integer prodQuantity = sc.nextInt();
 			sc.nextLine();
-			product = new Product2(name1, price);
-			item = new OrderItem(quantity, price, product);
-			Date moment = new Date();
-			order = new Order2(moment, status, client);
+			ShopProduct product = new ShopProduct(prodName, prodPrice);
+			OrderItem item = new OrderItem(prodQuantity, product);
 			order.addItem(item);
 		}
 			
 		System.out.println();
 		System.out.println("ORDER SUMMARY:");
-		System.out.println(order);
+		System.out.print(order);
+		System.out.println("Order items:");
+		for (int j = 0; j < n; j++) {
+			System.out.println(order.getItems().get(j).toString());;
+		}
 		
+		System.out.print("Total price: " + "$" + order.total());
+
 		sc.close();
 	}
-
 }

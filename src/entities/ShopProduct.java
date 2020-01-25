@@ -1,6 +1,6 @@
 package entities;
 
-public class Product2 {
+public class ShopProduct {
 	private String name;
 	private Double price;
 	
@@ -8,11 +8,11 @@ public class Product2 {
 	// - - - - - - - - C O N S T R U C T O R S - - - - - - - - - -  
 	// - - - - - - - -  O V E R L O A D I N G  - - - - - - - - - -   
 	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-	public Product2() {
+	public ShopProduct() {
 		
 	}
 
-	public Product2(String name, Double price) {
+	public ShopProduct(String name, Double price) {
 		this.name = name;
 		this.price = price;
 	}

@@ -4,18 +4,24 @@ public class OrderItem {
 	private Integer quantity;
 	private Double price;
 	
-	private Product2 product;
+	private ShopProduct product;
 	
+	// *\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/
+	// - - - - - - - - C O N S T R U C T O R - - - - - - - - - -    
+	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 	public OrderItem() {
 		
 	}
 
-	public OrderItem(Integer quantity, Double price, Product2 product) {
+	public OrderItem(Integer quantity, ShopProduct product) {
 		this.quantity = quantity;
-		this.price = price;
 		this.product = product;
 	}
 
+	// *\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/ 
+	// - - - - - -  G E T T E R S / S E T T E R S  - - - - - - - - 
+	// - - - - - - -  E N C A P S U L A T I O N  - - - - - - - - -  
+	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 	public Integer getQuantity() {
 		return quantity;
 	}
@@ -32,15 +38,27 @@ public class OrderItem {
 		this.price = price;
 	}
 
-	public Product2 getProduct() {
+	public ShopProduct getProduct() {
 		return product;
 	}
 
-	public void setProduct(Product2 product) {
+	public void setProduct(ShopProduct product) {
 		this.product = product;
 	}
 
+	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	// - - - - - -  O R D I N A R Y   M E T H O D S  - - - - - - - 
+	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 	public Double subTotal() {
-		return quantity * price;
+		return quantity * product.getPrice();
 	}
-}
+	
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		sb.append(product.getName() + ", ");
+		sb.append("$" + product.getPrice() + ", ");
+		sb.append("Quantity: " + quantity + ", ");
+		sb.append("Subtotal: " + "$" + subTotal());
+		return sb.toString();			
+		}
+	}

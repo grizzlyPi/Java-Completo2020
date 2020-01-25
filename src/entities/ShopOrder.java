@@ -5,11 +5,11 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import entities.enums.OrderStatus2;
+import entities.enums.ShopOrderStatus;
 
-public class Order2 {
+public class ShopOrder {
 	private Date moment;
-	private OrderStatus2 status;
+	private ShopOrderStatus status;
 	
 	private Client client;
 	
@@ -18,16 +18,23 @@ public class Order2 {
 	SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
 	SimpleDateFormat sdf2 = new SimpleDateFormat("dd/MM/yyyy");
 	
-	public Order2() {
+	// *\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/
+	// - - - - - - - - C O N S T R U C T O R - - - - - - - - - -    
+	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+	public ShopOrder() {
 		
 	}
 
-	public Order2(Date moment, OrderStatus2 status, Client client) {
+	public ShopOrder(Date moment, ShopOrderStatus status, Client client) {
 		this.moment = moment;
 		this.status = status;
 		this.client = client;
 	}
 
+	// *\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/ 
+	// - - - - - -  G E T T E R S / S E T T E R S  - - - - - - - - 
+	// - - - - - - -  E N C A P S U L A T I O N  - - - - - - - - -  
+	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 	public Date getMoment() {
 		return moment;
 	}
@@ -36,11 +43,11 @@ public class Order2 {
 		this.moment = moment;
 	}
 
-	public OrderStatus2 getStatus() {
+	public ShopOrderStatus getStatus() {
 		return status;
 	}
 
-	public void setStatus(OrderStatus2 status) {
+	public void setStatus(ShopOrderStatus status) {
 		this.status = status;
 	}
 
@@ -56,7 +63,9 @@ public class Order2 {
 		return items;
 	}
 
-	
+	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	// - - - - - -  O R D I N A R Y   M E T H O D S  - - - - - - - 
+	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 	public void addItem(OrderItem item) {
 		items.add(item);
 		
@@ -66,25 +75,20 @@ public class Order2 {
 		items.remove(item);
 	}
 	
-	@SuppressWarnings("null")
 	public Double total() {
-		Double sum = null;
-		for(OrderItem i : items) {
-			sum += i.subTotal();
+		Double sum = 0.0;
+		for(int i = 0; i < items.size(); i++) {
+			sum = sum + items.get(i).subTotal();
 		}
-		return sum;
+	return sum;
 	}
-	
 	
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
-		
 		sb.append("Order moment: " + sdf.format(moment) + "\n");
 		sb.append("Order status: " + status + "\n");
 		sb.append("Client: " + client.getName());
 		sb.append(" (" + sdf2.format(client.getBirthDate()) + ")" + " - " + client.getEmail() + "\n" );
-
 		return sb.toString();
-		
 	}
 }
