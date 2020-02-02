@@ -6,7 +6,7 @@ import java.util.Date;
 public class UsedProduct extends InheritanceProduct {
 	private Date manufactureDate;
 	
-	private SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+	private static SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 	
 	// *\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/
 	// - - - - - - - - C O N S T R U C T O R S - - - - - - - - - -  
