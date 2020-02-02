@@ -51,11 +51,11 @@ public class InheritanceShop {
 			 **********************************************************************************************************/
 				prod.add(new ImportedProduct(name, price, customsFee));
 
-			/***************************************************************************************************************
+			/*********************************************************************************************************
 			 * If we want to invoke subclass’s method then we will need to downcast the object but we can run into 
 			 * ClassCastException so, if you want to avoid this exception you can use a keyword 'instanceof' 
 			 * which will check the runtime type of the object before we cast the object as in below code.
-			 ***************************************************************************************************************/
+			 *********************************************************************************************************/
 				//InheritanceProduct up = new ImportedProduct(name, price, customsFee);
 				//if (up instanceof ImportedProduct) {
 				//	ImportedProduct down = (ImportedProduct) up;
