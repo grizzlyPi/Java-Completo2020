@@ -42,20 +42,20 @@ public class InheritanceShop {
 			if (ch == "i".charAt(0)) {
 				System.out.print("Customs fee: ");
 				Double customsFee = sc.nextDouble();
+			/**********************************************************************************************************
+			 * Upcasting is casting a subtype to a supertype, upward to the inheritance tree. 
+			 * Here, we cast the 'ImportedProduct' type to the 'InheritanceProduct' type. 
+			 * Because 'InheritanceProduct' is the supertype of 'ImportedProduct', this casting is called upcasting.
+			 * Note that the actual object type does not change because of casting. 
+			 * The'ImportedProduct' object is still a 'ImportedProduct' object. Only the reference type gets changed.
+			 **********************************************************************************************************/
 				prod.add(new ImportedProduct(name, price, customsFee));
-				/**********************************************************************************************************
-				 * Upcasting is casting a subtype to a supertype, upward to the inheritance tree. 
-				 * Here, we cast the 'ImportedProduct' type to the 'InheritanceProduct' type. Because 'InheritanceProduct' 
-				 * is the supertype of 'ImportedProduct', this casting is called upcasting.
-				 * Note that the actual object type does not change because of casting. 
-				 * The'ImportedProduct' object is still a 'ImportedProduct' object. Only the reference type gets changed.
-				 **********************************************************************************************************/
-				
-				/***************************************************************************************************************
-				 * If we want to invoke subclass’s method then we will need to downcast the object but we can run into 
-				 * ClassCastException so, if you want to avoid this exception you can use a keyword instanceof which will check 
-				 * the runtime type of the object before we cast the object as in below code.
-				 ***************************************************************************************************************/
+
+			/***************************************************************************************************************
+			 * If we want to invoke subclass’s method then we will need to downcast the object but we can run into 
+			 * ClassCastException so, if you want to avoid this exception you can use a keyword 'instanceof' 
+			 * which will check the runtime type of the object before we cast the object as in below code.
+			 ***************************************************************************************************************/
 				//InheritanceProduct up = new ImportedProduct(name, price, customsFee);
 				//if (up instanceof ImportedProduct) {
 				//	ImportedProduct down = (ImportedProduct) up;
