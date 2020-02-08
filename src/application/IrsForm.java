@@ -19,7 +19,6 @@ public class IrsForm {
 		
 		List<TaxPayer> list = new ArrayList<>();
 		
-		
 		System.out.print("Enter the number of tax payers: ");
 		int n = sc.nextInt();
 		sc.nextLine();
@@ -53,13 +52,14 @@ public class IrsForm {
 		
 		System.out.println("TAXES PAID: ");
 		Double sum = 0.0;
+		
 		for (TaxPayer tp : list) {
 			sum += tp.totalDue();
 			System.out.println(tp.getName() + ": " + "$ " + String.format("%.2f", tp.totalDue()));
 		}
+		
 		System.out.println();
 		System.out.println("TOTAL TAXES: $ "  + sum);
 		sc.close();
 	}
-
 }

@@ -4,6 +4,10 @@ public class Individual extends TaxPayer {
 
 	private Double healthExpenditures;
 	
+	// *\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/
+	// - - - - - - - - C O N S T R U C T O R S - - - - - - - - - -  
+	// - - - - - - - -  O V E R L O A D I N G  - - - - - - - - - -   
+	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 	public Individual() {
 		super();	
 	}
@@ -13,6 +17,10 @@ public class Individual extends TaxPayer {
 		this.healthExpenditures = healthExpenditures;
 	}
 
+	// *\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/ 
+	// - - - - - -  G E T T E R S / S E T T E R S  - - - - - - - - 
+	// - - - - - - -  E N C A P S U L A T I O N  - - - - - - - - -  
+	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 	public Double getHealthExpenditures() {
 		return healthExpenditures;
 	}
@@ -20,7 +28,10 @@ public class Individual extends TaxPayer {
 	public void setHealthExpenditures(Double healthExpenditures) {
 		this.healthExpenditures = healthExpenditures;
 	}
-
+	
+	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	// - - - - - -  O R D I N A R Y   M E T H O D S  - - - - - - - 
+	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 	@Override
 	public Double totalDue() {
 		Double total;
