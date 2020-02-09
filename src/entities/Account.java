@@ -8,6 +8,10 @@ public class Account {
 	private Double balance;
 	private Double withdrawLimit;
 	
+	// *\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/
+	// - - - - - - - - C O N S T R U C T O R S - - - - - - - - - -  
+	// - - - - - - - -  O V E R L O A D I N G  - - - - - - - - - -   
+	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 	public Account() {
 		
 	}
@@ -19,6 +23,10 @@ public class Account {
 		this.withdrawLimit = withdrawLimit;
 	}
 
+	// *\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/*\/ 
+	// - - - - - -  G E T T E R S / S E T T E R S  - - - - - - - - 
+	// - - - - - - -  E N C A P S U L A T I O N  - - - - - - - - -  
+	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 	public Integer getNumber() {
 		return number;
 	}
@@ -47,6 +55,9 @@ public class Account {
 		this.withdrawLimit = withDrawLimit;
 	}
 	
+	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	// - - - - - -  O R D I N A R Y   M E T H O D S  - - - - - - - 
+	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 	public void deposit(Double amount) {
 		balance += amount;
 	}
