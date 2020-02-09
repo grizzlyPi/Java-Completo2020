@@ -7,6 +7,7 @@ import java.util.InputMismatchException;
 import java.util.Locale;
 import java.util.Scanner;
 
+import entities.Reservation;
 import model.exceptions.ReservationException;
 
 public class BookingExample {
