@@ -24,7 +24,7 @@ public class Votes {
 				String[] fields = line.split(",");
 				String name = fields[0];
 				Integer value = Integer.parseInt(fields[1]);
-				map.put(name, map.get(name) == null? value:map.get(name) + value);
+				map.put(name, map.getOrDefault(name, 0) + value);
 				line = br.readLine();
 			}
 			
