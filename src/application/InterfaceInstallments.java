@@ -43,7 +43,7 @@ public class InterfaceInstallments {
 			System.out.println(sdf.format(i.getDueDate()) + " - " + String.format("%.2f", i.getAmount()));
 			sum += i.getAmount();
 		}		
-		System.out.println("Total value x 12: " + String.format("%.2f", sum));
+		System.out.println("Total value x " + n + ": " + String.format("%.2f", sum));
 		sc.close();
 	}
 }
